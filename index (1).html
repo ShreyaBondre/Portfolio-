@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shreya Bondre Portfolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+#42445Afont-family:Arial;
+scroll-behavior:smooth; 
+}
+
+/* Intro Animation */
+
+.intro{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:black;
+color:white;
+font-size:40px;
+font-weight:bold;
+}
+
+/* Portfolio Section */
+
+.portfolio{
+display:none;
+background:#f4f4f4;
+}
+
+/* Navbar */
+
+nav{
+background:#111;
+color:white;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-size:18px;
+}
+
+/* Profile */
+
+.profile{
+text-align:center;
+padding:40px;
+background:white;
+}
+
+.profile img{
+width:150px;
+height:150px;
+border-radius:50%;
+margin-top:20px;
+}
+
+/* Sections */
+
+section{
+padding:40px;
+text-align:center;
+}
+
+h2{
+margin-bottom:20px;
+color:#333;
+}
+
+/* Skills */
+
+.skills span{
+display:inline-block;
+background:#333;
+color:white;
+padding:10px 20px;
+margin:5px;
+border-radius:20px;
+}
+
+/* Projects */
+
+.project-card{
+background:white;
+padding:20px;
+margin:10px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Certificates */
+
+.certificate p{
+background:white;
+padding:12px;
+margin:10px auto;
+width:300px;
+border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Contact */
+
+.contact a{
+display:block;
+margin:10px;
+font-size:18px;
+color:#333;
+text-decoration:none;
+}
+
+/* Footer */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Intro Animation -->
+
+<div class="intro">
+<h1 id="typing"></h1>
+</div>
+
+<!-- Portfolio -->
+
+<div class="portfolio">
+
+<nav>
+
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#certificate">Certificates</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<!-- Profile -->
+
+<div class="profile">
+
+<h1>Shreya Bondre</h1>
+
+<img src="profile.jpg" alt="Profile Photo">
+
+<p>BCA Student | Future Software Developer</p>
+
+</div>
+
+<!-- About -->
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+Hello! My name is Shreya Bondre.  
+I am a BCA student who is passionate about technology and software development.  
+I enjoy learning programming languages and building projects like websites and applications.  
+My goal is to become a successful software developer and work with top IT companies.
+</p>
+
+</section>
+
+<!-- Skills -->
+
+<section id="skills">
+
+<h2>My Skills</h2>
+
+<div class="skills">
+
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Python</span>
+<span>Git</span>
+<span>GitHub</span>
+
+</div>
+
+</section>
+
+<!-- Projects -->
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="project-card">
+<h3>Portfolio Website</h3>
+<p>A personal portfolio website created using HTML, CSS and JavaScript.</p>
+</div>
+
+<div class="project-card">
+<h3>AI Chatbot</h3>
+<p>A simple chatbot created using Python.</p>
+</div>
+
+<div class="project-card">
+<h3>Search Algorithms</h3>
+<p>Implementation of BFS, DFS and Uniform Cost Search.</p>
+</div>
+
+</section>
+
+<!-- Certificates -->
+
+<section id="certificate">
+
+<h2>Certificates</h2>
+
+<div class="certificate">
+
+<p>✔ AI Workshop Certificate</p>
+<p>✔ Python Programming Certificate</p>
+<p>✔ Web Development Certificate</p>
+<p>✔ Internship Certificate</p>
+
+</div>
+
+</section>
+
+
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<h2>Connect With Me</h2>
+
+<div class="contact">
+
+<a href="https://www.instagram.com/shreya_bondre_21?igsh=ZzZjdTZ2bDBlNW54">Instagram</a>
+
+<a href="shreyabondre829@gmail.com">Gmail</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Shreya Bondre | Portfolio</p>
+
+</footer>
+
+</div>
+
+<script>
+
+/* Typing Animation */
+
+const text = "Hi, I am Shreya Bondre";
+let index = 0;
+
+function typing(){
+
+document.getElementById("typing").innerHTML =
+text.slice(0,index++);
+
+if(index > text.length){
+setTimeout(showPortfolio,1000);
+}
+
+}
+
+setInterval(typing,100);
+
+/* Show Portfolio */
+
+function showPortfolio(){
+
+document.querySelector(".intro").style.display="none";
+document.querySelector(".portfolio").style.display="block";
+
+}
+
+</script>
+
+</body>
+</html>
